@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Forms</title>
+  </head>
+ 
+  <body>
+    <header>
+        <div class="titulo">
+          <h1 class="archivobold">Crie e compartilhe</br> seu evento</h1>
+          <p class="poppins">O primeiro passo, é preencher esse</br>
+            formulário de inscrição.</p>
+          </header>
+        </div>
+        <form id="my-form">
+
+          <fieldset>
+            <legend class="archivosemibold">Informações do evento</legend>
+            
+            <div class="input-wrapper">
+              <label class="poppins" for="event-title">
+                Título do evento <span>(Mínimo 8 caracteres)</span>
+                <input type="text" id="event-title" required minlength="8">
+              </label>
+            </div>
+
+            <div class="input-wrapper">
+              <label class="poppins" for="event-link">
+                Link do evento <span>(Comece com https://)</span>
+                <input type="url" id="event-link" required>
+              </label>
+            </div>
+
+            <div class="input-wrapper">
+              <label class="poppins" for="event-wpp">
+                Whatsapp  para contato <span>(Somente números)</span>
+                <input type="number" id="event-wpp">
+              </label>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="Iex">
+                <label class="poppins" for="iex">
+                  Informações extras
+                  <textarea id="event-info"></textarea>
+                </label>
+              </div>
+            </div>
+            
+            <div class="input-wrapper">
+              <label class="poppins" for="event-cat">
+                Categoria
+                <select id="event-cat">
+                  <option value="In live">Ao vivo</option>
+                  <option value="PodCast">PodCast</option>
+                  <option value="Mentorship">Mentoria</option>
+                </select>
+                </label>
+            </div>
+            
+            <legend class="archivosemibold levanta">Privacidade</legend>
+            
+            <div class="input-wrapper">
+              <label class="poppins" for="event-title">
+                Email do administrador <span>(Digite um email válido)</span>
+                <input type="email" id="event-title" required>
+              </label>
+            </div>
+
+            <div class="input-wrapper">
+              <label class="poppins" for="event-title">
+                Senha de acesso para os participantes <span>(Minimo 8 caracteres)</span>
+                <input type="password" id="event-title" required minlength="8">
+              </label>
+            </div>
+            <div class="positioncheckbox">
+            <input type="checkbox" name="Private-event" id="Private-event">
+            <label class="poppins checkbox" for="Private-event">
+              Evento privado
+            </label>
+          </div>
+          
+          <legend class="archivosemibold levanta">Dia e hora</legend>
+
+          <div class="flex">
+          <div class="input-wrapper date">
+            <label class="poppins" for="event-date">
+              Data
+              <input type="date" id="event-date" required>
+            </label>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="poppins" for="event-hour">
+              Das
+              <input type="time" id="event-hour" required>
+            </label>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="poppins" for="event-hour">
+              Até
+              <input type="time" id="event-hour" required>
+            </label>
+          </div>
+        </div>
+          </fieldset>
+
+        </form>
+        <footer>
+          <input class="button archivosemibold" type="submit" value="Salvar evento" form="my-form">
+        </footer>
+        
+      
+  </body>
+</html>
